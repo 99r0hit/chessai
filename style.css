@@ -1,0 +1,9 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+
+#board {
+  margin: 20px auto;
+}
