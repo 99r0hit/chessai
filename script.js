@@ -8,7 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const game = new Chess();
 
-const stockfish = new Worker('stockfish.js');
+
+
+const stockfish = new Worker('https://cdnjs.cloudflare.com/ajax/libs/stockfish.js/10.0.2/stockfish.min.js');
+
+stockfish.onmessage = function(event) {
+  console.log(event.data);
+};
+
+stockfish.postMessage('uci');
+
 
 stockfish.onmessage = function(event) {
   const line = event.data;
