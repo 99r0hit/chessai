@@ -1,4 +1,6 @@
-const board = Chessboard('board', {
+document.addEventListener("DOMContentLoaded", function () {
+  // all your JS code here
+  const board = Chessboard('board', {
   draggable: true,
   position: 'start',
   onDrop: onDrop,
@@ -55,3 +57,5 @@ function updateStatus() {
   fenEl.textContent = game.fen();
   pgnEl.textContent = game.pgn();
 }
+
+});
